@@ -55,22 +55,10 @@ It’s built for beginners who want to understand how markets move, explore stoc
 .💬 Interactive Interface: Intuitive navigation and responsive charts.
 .🕵️ API Integration: Fetches real data using stock APIs.
 
-##🧰 Project Structure
+---
 
-Bull-n-Byte/
-├── frontend/           # React frontend
-│   ├── src/
-│   └── public/
 
-├── backend/            # Express backend
-│   ├── routes/
-│   ├── models/
-│   └── controllers/
-└── README.md
-
-##👨‍💻 Author
-
-###Hemanshu Ganekar
-###🔗 GitHub
+👨‍💻 Author
+Hemanshu Ganekar
 
 💬 “Learn. Build. Improve. Repeat.”
