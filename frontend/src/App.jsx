@@ -6,7 +6,7 @@ import Navbar from './pages/navbar.jsx'
 
 function App() {
   return (
-    <div className='bg-green-100 min-h-[100vh] min-w-full'>
+    <div className='bg-green-200 min-h-[100vh] min-w-full'>
       <Navbar/>
        <Outlet/>
     </div>

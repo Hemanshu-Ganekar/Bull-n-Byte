@@ -8,10 +8,10 @@ export default function PixelNavbar() {
   const dispatch = useDispatch();
   const redirect = useNavigate();
   const navItems = [
-    { id: 'home', label: 'HOME' },
-    { id: 'play', label: 'PLAY' },
-    { id: 'practice', label: 'PRACTICE' },
-    { id: 'about', label: 'ABOUT US' }
+    { id: 'home', label: 'HOME' ,URL:"/"},
+    { id: 'play', label: 'PLAY' ,URL:"/play"},
+    { id: 'practice', label: 'PRACTICE' ,URL:"/practice"},
+    { id: 'about', label: 'ABOUT US' ,URL:"/about"},
   ];
   const log = ()=>{
     if(login){
@@ -23,7 +23,7 @@ export default function PixelNavbar() {
     }
   }
   return (
-    <div className=" bg-green-200 p-8 m-0">
+    <div className=" bg-transparent p-8 m-0">
       {/* Navbar */}
       <nav className="bg-red-600 border-8 border-black shadow-lg">
         <div className="max-w-7xl mx-auto">
@@ -46,9 +46,11 @@ export default function PixelNavbar() {
               {navItems.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => setActiveItem(item.id)}
+                  onClick={() => {setActiveItem(item.id)
+                  redirect(item.URL);
+                  }}
                   className={`px-6 py-3 border-4 border-black font-bold text-sm transition-all ${
-                    activeItem === item.id
+                    location.pathname === item.URL
                       ? 'bg-yellow-400 text-black translate-y-1'
                       : 'bg-white text-black hover:bg-yellow-200 hover:translate-y-0.5'
                   }`}

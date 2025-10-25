@@ -2,6 +2,7 @@ import mongoose, { Mongoose } from "mongoose";
 import express from "express";
 import authrouter from "./routes/authRoute.js";
 import protectedRoute from "./routes/protected.js";
+import tradeRouter from "./routes/trade.js";
 import CORS from "cors"
 import dotenv from "dotenv";
 dotenv.config();
@@ -12,6 +13,7 @@ app.use(express.json());
 
 app.use(authrouter);
 app.use(protectedRoute);
+app.use(tradeRouter);
 
 
 mongoose.connect(mongoPath).then(()=>{
